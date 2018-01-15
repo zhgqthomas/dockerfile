@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  ssr:
+    restart: always
+    build: .
+    container_name: ssr
+    ports:
+      - "19891:19891/tcp"
+      - "19891:19891/udp"
+    dns: 
+      - 8.8.8.8
+      - 8.8.4.4
