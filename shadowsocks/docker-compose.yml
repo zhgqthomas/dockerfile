@@ -6,7 +6,7 @@ services:
     build: .
     container_name: shadowsocks
     ports:
-      - "10001:10001/tcp"
-      - "10001:10001/udp"
+      - "443:443/tcp"
+      - "443:443/udp"
     dns: 8.8.8.8
-    command: -s "-s 0.0.0.0 -p 10001 -k passgfw -m rc4-md5 --fast-open -u"
+    command: -s "-s 0.0.0.0 -p 443 -k passgfw -m aes-256-cfb --fast-open -u"
